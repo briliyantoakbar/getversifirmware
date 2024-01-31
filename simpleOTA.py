@@ -13,6 +13,9 @@ import sqlite3
 from pydantic import BaseModel
 global versi
 app = FastAPI()
+conn=sqlite3.connect("Uuiduser.db",check_same_thread=False)
+cursor=conn.cursor()
+conn.commit()
 
 class Item(BaseModel):
     name:list
